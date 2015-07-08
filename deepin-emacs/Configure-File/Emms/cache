@@ -1,0 +1,7 @@
+;;; .emms-cache -*- mode: emacs-lisp; coding: utf-8; -*-
+(puthash "/home/bl/Music/如果有来生.mp3" '(*track* (type . file) (name . "/home/bl/Music/如果有来生.mp3") (info-mtime 21859 4167 0 0) (metadata)) emms-cache-db)
+(puthash "/home/bl/Music/光辉岁月.mp3" '(*track* (type . file) (name . "/home/bl/Music/光辉岁月.mp3") (info-mtime 21859 4167 0 0) (metadata)) emms-cache-db)
+(puthash "/home/bl/Music/冷雨夜.mp3" '(*track* (type . file) (name . "/home/bl/Music/冷雨夜.mp3") (info-mtime 21859 4167 0 0) (metadata)) emms-cache-db)
+(puthash "/home/bl/Music/大地.mp3" '(*track* (type . file) (name . "/home/bl/Music/大地.mp3") (info-mtime 21859 4167 0 0) (metadata)) emms-cache-db)
+(puthash "/home/bl/Music/真的爱你.mp3" '(*track* (type . file) (name . "/home/bl/Music/真的爱你.mp3") (info-mtime 21859 4167 0 0) (metadata)) emms-cache-db)
+(puthash "/home/bl/Music/长城.mp3" '(*track* (type . file) (name . "/home/bl/Music/长城.mp3") (info-mtime 21859 4167 0 0) (metadata)) emms-cache-db)

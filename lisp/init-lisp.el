@@ -1,11 +1,31 @@
+(defun string-replace (this withthat in)
+  "replace THIS with WITHTHAT' in the string IN"
+  (with-temp-buffer
+    (insert in)
+    (goto-char (point-min))
+    (while (search-forward this nil t)
+      (replace-match withthat nil t))
+    (buffer-substring (point-min) (point-max))))
+
+(defun fortune-zh-msg()
+  "fortune"
+  (concat (concat ";;--------------------\n;;" (string-replace "\n" "\n;;" (string-replace "33" "" (string-replace "32" "" (string-replace "m" "" (string-replace "\^\[\[" "" (shell-command-to-string "fortune-zh"))))))) "--------------------\n"))
+
+(defun fortune-zh ()
+  "fortune-zh"
+  (interactive)
+  (insert (fortune-zh-msg)))
+
+
 (require-package 'elisp-slime-nav)
 (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
   (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
 (require-package 'lively)
 
-(setq-default initial-scratch-message
-              (concat ";; Happy hacking " (or user-login-name "") " - Emacs ♥ you!\n\n"))
+;;(setq-default initial-scratch-message (concat ";; Happy hacking " (or user-login-name "") " - Emacs ♥ you!\n\n"))
+
+(setq-default initial-scratch-message (fortune-zh-msg))
 
 
 
